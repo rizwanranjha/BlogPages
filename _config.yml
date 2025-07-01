@@ -6,6 +6,9 @@ url: "https://yourusername.github.io"
 
 theme: minima
 
+sass:
+  style: compressed
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
