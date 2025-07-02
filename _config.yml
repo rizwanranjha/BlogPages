@@ -1,14 +1,44 @@
-title: My GitHub Pages Blog
-description: A simple blog built with Jekyll and GitHub Pages
-author: Your Name
-baseurl: "" # keep this empty for user.github.io
-url: "https://yourusername.github.io"
+title: Rizwan Ranjha Blog
+description: Personal blog and resume using Jekyll
+author: Rizwan Ranjha
 
-theme: minima
+# Required for GitHub Pages (leave baseurl blank for user site)
+baseurl: "" 
+url: "https://rizwanranjha.github.io"
 
+# Remote theme setup
+remote_theme: rizwanranjha/codexfolio
+
+# Jekyll plugins (must match your Gemfile if using locally)
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Output and optimization
 sass:
   style: compressed
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Enable pages collection if you're using _pages/
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Default layout mapping
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+# Social media metadata
+social:
+  github: rizwanranjha
+  linkedin: rizwanranjha
